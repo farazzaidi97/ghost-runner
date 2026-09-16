@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "PreCompact": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "TRIGGER=$(jq -r '.trigger' </dev/stdin); { echo \"---\"; echo \"compacted_at: $(date -Iseconds)\"; echo \"trigger: $TRIGGER\"; } >> .claude/memory/compaction_log.md"
+          }
+        ]
+      }
+    ],
+    "PostCompact": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"completed_at: $(date -Iseconds)\" >> .claude/memory/compaction_log.md"
+          }
+        ]
+      }
+    ]
+  }
+}

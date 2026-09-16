@@ -1,0 +1,1 @@
+-keep class com.ghostrunner.wear.core.PacingEngineService { *; }

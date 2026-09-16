@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ghost Runner</string>
+    <string name="pacing_channel_name">Pacing System</string>
+    <string name="pacing_channel_description">Persistent notification while a Ghost Runner session is active on the watch.</string>
+    <string name="notification_title">Ghost Runner Active</string>
+    <string name="notification_text">Pacing via spatial audio.</string>
+</resources>

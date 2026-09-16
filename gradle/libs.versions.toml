@@ -1,0 +1,93 @@
+[versions]
+agp = "8.7.3"
+kotlin = "2.0.21"
+ksp = "2.0.21-1.0.28"
+
+# AndroidX core
+coreKtx = "1.13.1"
+lifecycleRuntimeKtx = "2.8.7"
+activityCompose = "1.9.3"
+
+# Compose
+composeBom = "2024.10.01"
+navigationCompose = "2.8.4"
+
+# Persistence
+room = "2.6.1"
+datastore = "1.1.1"
+
+# Concurrency
+coroutines = "1.9.0"
+
+# Location & Health
+playServicesLocation = "21.3.0"
+healthServices = "1.1.0-alpha05"
+
+# Wear OS
+wearCompose = "1.4.0"
+wearOngoing = "1.0.0"
+
+# Test
+junit = "4.13.2"
+truth = "1.4.4"
+mockk = "1.13.13"
+
+# SDK & Java
+compileSdk = "35"
+targetSdk = "35"
+minSdk = "33"
+jvmTarget = "17"
+
+[libraries]
+# Core
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-lifecycle-service = { module = "androidx.lifecycle:lifecycle-service", version.ref = "lifecycleRuntimeKtx" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
+
+# Compose (versions via BOM)
+androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+androidx-compose-ui = { module = "androidx.compose.ui:ui" }
+androidx-compose-ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
+androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+androidx-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+androidx-compose-material3 = { module = "androidx.compose.material3:material3" }
+androidx-compose-material-icons-extended = { module = "androidx.compose.material:material-icons-extended" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+
+# Room
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+
+# DataStore
+androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
+
+# Coroutines
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+kotlinx-coroutines-play-services = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services", version.ref = "coroutines" }
+kotlinx-coroutines-guava = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-guava", version.ref = "coroutines" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+
+# Location & Health
+play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "playServicesLocation" }
+androidx-health-services-client = { module = "androidx.health:health-services-client", version.ref = "healthServices" }
+
+# Wear OS
+androidx-wear-compose-material = { module = "androidx.wear.compose:compose-material", version.ref = "wearCompose" }
+androidx-wear-compose-foundation = { module = "androidx.wear.compose:compose-foundation", version.ref = "wearCompose" }
+androidx-wear-compose-navigation = { module = "androidx.wear.compose:compose-navigation", version.ref = "wearCompose" }
+androidx-wear-ongoing = { module = "androidx.wear:wear-ongoing", version.ref = "wearOngoing" }
+
+# Test
+junit = { module = "junit:junit", version.ref = "junit" }
+truth = { module = "com.google.truth:truth", version.ref = "truth" }
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }

@@ -1,0 +1,38 @@
+*.iml
+.gradle/
+local.properties
+.idea/
+.DS_Store
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+release/
+
+# IntelliJ
+*.ipr
+*.iws
+.idea/
+
+# VS Code
+.vscode/
+
+# Keystore
+*.jks
+*.keystore
+
+# Compose
+.compose/
+
+# Kotlin
+.kotlin/
